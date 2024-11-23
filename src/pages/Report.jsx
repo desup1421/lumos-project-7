@@ -39,7 +39,7 @@ const Report = () => {
               </tr>
             </thead>
             <tbody>
-              {logs.map((log, index) => (
+              {logs?.map((log, index) => (
                 <tr key={index}>
                   <td>{log.date}</td>
                   <td>{log.product_id}</td>

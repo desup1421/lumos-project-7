@@ -12,7 +12,7 @@
       "name": "The Philosophy of Crayon",
       "description": "Buku pengembangan diri by: Carrin Fu",
       "price": "77000",
-      "stock": 102
+      "stock": 93
     },
     {
       "id": "9786021514917",
@@ -20,6 +20,13 @@
       "description": "Buku informatika",
       "price": "50000",
       "stock": "100"
+    },
+    {
+      "id": "123",
+      "name": "My Book",
+      "description": "My Book",
+      "price": "10000",
+      "stock": "10"
     }
   ],
   "logs": [
@@ -94,6 +101,38 @@
       "note": "Sold 10",
       "date": "2024-11-23",
       "type": "stock_out"
+    },
+    {
+      "id": "5e46",
+      "product_id": "9786237100072",
+      "quantity": "10",
+      "note": "10 buku terjual",
+      "date": "2024-11-23",
+      "type": "stock_out"
+    },
+    {
+      "id": "8c78",
+      "product_id": "9786237100072",
+      "quantity": "1",
+      "note": "Catatan",
+      "date": "2024-11-23",
+      "type": "stock_in"
+    },
+    {
+      "id": "cb22",
+      "product_id": "9786237100072",
+      "quantity": "2",
+      "note": "test",
+      "date": "2024-11-23",
+      "type": "stock_out"
+    },
+    {
+      "id": "2349",
+      "product_id": "9786237100072",
+      "quantity": "2",
+      "note": "note",
+      "date": "2024-11-23",
+      "type": "stock_in"
     }
   ]
 }

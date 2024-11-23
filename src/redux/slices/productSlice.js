@@ -141,6 +141,7 @@ const productSlice = createSlice({
             state.totalProduct = action.payload.length;
             state.isSuccess = false;
             state.data = {};
+            state.isAddData = true;
         });
         builder.addCase(fetchProducts.rejected, (state, action) => {
             state.loading = false;
@@ -157,6 +158,7 @@ const productSlice = createSlice({
             state.logs = action.payload;
             state.isSuccess = false;
             state.data = {};
+            state.isAddData = true;
         });
         builder.addCase(fetchLogs.rejected, (state, action) => {
             state.loading = false;
@@ -260,15 +262,13 @@ const productSlice = createSlice({
         });
         builder.addCase(stockOut.fulfilled, (state, action) => {
             state.loading = false;
-            state.logs = action.payload;
+            state.logs = [...state.logs, action.payload];
             state.data = {};
-            state.productId = '';
             state.isSuccess = true;
         });
         builder.addCase(stockOut.rejected, (state, action) => {
             state.loading = false;
             state.data = {};
-            state.productId = '';
             state.error = action.payload || "something wrong";
         });
 
@@ -279,15 +279,13 @@ const productSlice = createSlice({
         });
         builder.addCase(stockIn.fulfilled, (state, action) => {
             state.loading = false;
-            state.logs = action.payload;
+            state.logs = [...state.logs, action.payload];
             state.data = {};
-            state.productId = '';
             state.isSuccess = true;
         });
         builder.addCase(stockIn.rejected, (state, action) => {
             state.loading = false;
             state.data = {};
-            state.productId = '';
             state.error = action.payload || "something wrong";
         });
 
@@ -300,12 +298,10 @@ const productSlice = createSlice({
             state.loading = false;
             state.highestDemand = action.payload;
             state.soldProduct = action.payload.reduce((acc,item) =>  {return acc + item[1]}, 0);
-            state.productId = '';
             state.isSuccess = true;
         });
         builder.addCase(highDemand.rejected, (state, action) => {
             state.loading = false;
-            state.productId = '';
             state.error = action.payload || "something wrong";
         }); 
     }
