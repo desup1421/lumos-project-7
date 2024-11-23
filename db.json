@@ -6,6 +6,13 @@
       "description": "Ergonomic wireless mouse with high precision.",
       "price": 150000,
       "stock": 110
+    },
+    {
+      "id": "9786237100072",
+      "name": "The Philosophy of Crayon",
+      "description": "Buku pengembangan diri by: Carrin Fu",
+      "price": 77000,
+      "stock": 100
     }
   ],
   "logs": [
